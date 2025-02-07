@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Exam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+        
+
+
+        .header {
+            background-color: white;
+            padding: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .container {
+    width: 90%; /* Increased width */
+    max-width: 1200px;
+    min-height: 80vh; /* Set a minimum height in percentage for better responsiveness */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header, .table-header, table, .back-button {
+    flex: 0 0 auto;
+}
+
+table {
+    flex: 1 1 auto; /* Allow the table to grow if needed */
+    margin-bottom: 20px; /* Add spacing at the bottom for better alignment */
+}
+
+tbody {
+    max-height: 300px; /* Optional: Set max height for scrolling if needed */
+    overflow-y: auto; /* Optional: Enable vertical scrolling for long content */
+}
+  .header h1 {
+            color: #e53935;
+            font-size: 24px;
+            margin: 0;
+        }
+        .table-header {
+            background-color: #f1f8e9;
+            padding: 10px 20px;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0;
+            font-size: 16px;
+        }
+        th, td {
+            padding: 12px 20px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        th {
+            color: #e53935;
+            font-weight: bold;
+        }
+        .action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: auto; /* Pushes the buttons to the bottom */
+    align-items: flex-start; /* Align buttons to the start of each cell */
+    height: 100%; /* Ensures it takes the full height of the cell */
+    justify-content: flex-end; /* Ensures buttons are aligned to the bottom */
+}
+
+        .action-buttons {
+            display: flex;
+        }
+        .add-button {
+            padding: 8px 16px;
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .delete-button {
+            padding: 8px 16px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .back-button {
+            padding: 8px 16px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            margin: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .back-button:hover,
+        .add-button:hover,
+        .delete-button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>MANAGE EXAM</h1>
+        </div>
+        <div class="table-header">EXAM LIST</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Exam Title</th>
+                    <th>Course</th>
+                    <th>Description</th>
+                    <th>Time Limit</th>
+                    <th>Display Limit</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Quiz Exam</td>
+                    <td>Quiz</td>
+                    <td>Choose the following Questions</td>
+                    <td>10</td>
+                    <td>20</td>
+                    <td class="action-buttons">
+                        <button class="add-button">Add Questions</button>
+                        <button class="delete-button">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Programing</td>
+                    <td>Quiz</td>
+                    <td>Choose the following Questions</td>
+                    <td>10</td>
+                    <td>20</td>
+                    <td class="action-buttons">
+                        <button class="add-button">Add Questions</button>
+                        <button class="delete-button">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Verbal Reasoning Test</td>
+                    <td>Quiz</td>
+                    <td>Choose the following Questions</td>
+                    <td>10</td>
+                    <td>20</td>
+                    <td class="action-buttons">
+                        <button class="add-button">Add Questions</button>
+                        <button class="delete-button">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Analytical Writing</td>
+                    <td>Paragraph</td>
+                    <td>Finding answer</td>
+                    <td>10</td>
+                    <td>20</td>
+                    <td class="action-buttons">
+                        <button class="add-button">Add Questions</button>
+                        <button class="delete-button">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div style="text-align: center;">
+            <button class="back-button">Back</button>
+        </div>
+    </div>
+</body>
+</html>

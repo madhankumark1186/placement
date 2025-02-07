@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Overview</title>
+    <style>
+        /* General styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: #fff;
+        }
+
+        /* Dashboard container */
+        .dashboard-container {
+            text-align: center;
+        }
+
+        /* Header styling */
+        .dashboard-header {
+            color: #39ff14; /* Bright green color */
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        /* Completed exams container */
+        .exams-container {
+            background-color: #1b1b2f;
+            padding: 20px;
+            border-radius: 12px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 0 100px rgba(0, 255, 238, 0.5);
+            margin: 0 auto;
+        }
+
+        .exams-container h3 {
+            color: #00ccff;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        .exam-item {
+            color: #ff4d4d;
+            font-size: 0.9em;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        /* Back button styling */
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 50px;
+            background-color: #ff1a1a;
+            color: #fff;
+            font-size: 1em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <div class="dashboard-header">Dash Board Overview</div>
+        
+        <!-- Completed Exams Section -->
+        <div class="exams-container">
+            <h3>Completed Exams</h3>
+            <div id="exams-list">
+                <!-- Static exam data for demonstration -->
+                <div class="exam-item"><strong>Completed Exam:</strong> Math's Test on September 20, 2024</div>
+                <div class="exam-item"><strong>English Test:</strong> On September 25, 2024</div>
+                <div class="exam-item"><strong>Aptitude Test:</strong> On October 1, 2024</div>
+            </div>
+        </div>
+
+        <!-- Back Button -->
+        <a href="#" class="back-button">Back</a>
+    </div>
+
+</body>
+</html>

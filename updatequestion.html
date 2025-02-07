@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Question Form</title>
+    <style>
+        /* CSS Styles */
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 600px; /* Width of the form container */
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+            margin-right: 50px;
+        }
+
+        .form-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .form-header h2 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .close-button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #999;
+        }
+
+        .question-form label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .question-form input {
+            width: 90%; /* Increased width for text inputs to 100% */
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f0f0f0;
+            color: #666;
+        }
+
+        .correct-answer-label {
+            color: green;
+        }
+
+        .correct-answer {
+            color: green;
+            font-weight: bold;
+        }
+
+        .update-button {
+            background-color: #4b00d9;
+            color: white;
+            padding: 10px;
+            width: 30%;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-left: 300px;
+        }
+
+        .update-button:hover {
+            background-color: #3a00a6;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h2>Update Question</h2>
+            <button class="close-button">&times;</button>
+        </div>
+        <form class="question-form">
+            <label for="question">Questions</label>
+            <input type="text" id="question" placeholder="What is the SI unit of force?" disabled>
+            
+            <label for="choice-a">Choice A</label>
+            <input type="text" id="choice-a" value="Newton" disabled>
+            
+            <label for="choice-b">Choice B</label>
+            <input type="text" id="choice-b" value="Joule" disabled>
+            
+            <label for="choice-c">Choice C</label>
+            <input type="text" id="choice-c" value="Pascal" disabled>
+            
+            <label for="choice-d">Choice D</label>
+            <input type="text" id="choice-d" value="Watt" disabled>
+            
+            <label for="correct-answer" class="correct-answer-label">Correct Answer</label>
+            <input type="text" id="correct-answer" value="Newton" class="correct-answer" disabled>
+            
+            <button type="button" class="update-button">update now</button>
+        </form>
+    </div>
+</body>
+</html>

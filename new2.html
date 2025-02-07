@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Placement Examination</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #4c0080;
+            color: #fff;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background-color: #4c0080;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .left-nav {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .back-button img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #00e0ff;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links li a:hover {
+            color: #00e0ff;
+        }
+
+        /* Breadcrumb Section */
+        .breadcrumb {
+            background-color: #1a1a2e;
+            color: #00e0ff;
+            text-align: center;
+            padding: 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 80px; /* To prevent overlap with navbar */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Content Section */
+        .content {
+            margin: 20px auto;
+            width: 80%;
+            max-width: 1200px;
+            background-color: #1a1a2e;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            color: #fff;
+        }
+
+        .content p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .content h2 {
+            color: #ff00ff;
+            font-size: 1.5rem;
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+
+        /* Navigation Buttons in Content */
+        .nav-buttons {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .nav-buttons button {
+            background: linear-gradient(180deg, transparent, #ff00ff);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .nav-buttons button:hover {
+            background-color: #00e0ff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="left-nav">
+            <div class="back-button">
+                <img src="logo-photoaidcom-cropped.png" alt="Back">
+            </div>
+            <div class="title">Career Gate</div>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a onclick="window.location.href='index.html'">Home</a></li>
+                <li><a onclick="window.location.href='Login.html'">Login</a></li>
+                <li><a onclick="window.location.href='Aboutus.html'">About Us</a></li>
+                <li><a onclick="window.location.href='signup.html'">Register</a></li>
+                <li><a onclick="window.location.href='admin.html'">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb Section -->
+   <!-- <div class="breadcrumb">
+        Online Placement Examination
+    </div>  -->
+
+    <!-- Content Section -->
+     <br><br><br><br><br>
+    <main>
+        <div class="content">
+            <p>
+                Educational institutions have evolved over the years, thanks to technological advancements.
+                With smart classrooms and Learning Management Systems (LMS), it is now easier for teachers to conduct interactive learning sessions, map students' knowledge, and create progress reports.
+                These advancements make it easier for students to learn efficiently and for teachers to evaluate students with less effort and in less time.
+            </p>
+            <h2>What is an online examination?</h2>
+            <p>
+                Online examination is conducted on web-enabled devices like laptops and desktop computers. These exams or tests help to accurately assess a student’s knowledge in a wide range of subjects. 
+                The main advantage of this examination system is that it can be used to administer paper-less tests and also get instant test results.
+            </p>
+            <h2>What is an online examination system?</h2>
+            <p>
+                An online examination system is a computer-based test system that can be used to conduct computer-based tests online. This examination system uses fewer resources and reduces the need for question papers and answer scripts, exam room scheduling, arranging invigilators, coordinating with examiners, and more.
+            </p>
+            <h2>How to conduct online examination?</h2>
+            <p>
+                To administer a secure online examination, begin by choosing the type of online test you want to deliver, map the candidates who must appear for the examination, and send out email notifications with test details to the candidates. 
+                The candidates can click on the link provided in the email or login with their details and appear for the exam online.
+            </p>
+        </div>
+    </main>
+</body>
+</html>

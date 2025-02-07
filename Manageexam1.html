@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Exams</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: #f5f5f5;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            width: 20%;
+            background-color: #1b2a3d;
+            color: #4CAF50;
+            padding: 20px;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+        
+        .sidebar h2 {
+            color: #4CAF50;
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+        
+        .sidebar a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Main content */
+        .main-content {
+            width: 80%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        .main-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        
+        .main-header h1 {
+            font-size: 24px;
+            color: #333;
+            margin: 0;
+        }
+        
+        .exam-section {
+            display: flex;
+            gap: 20px;
+        }
+        
+        /* Exam information and questions boxes */
+        .exam-box {
+            flex: 1;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .exam-box h2 {
+            color: #e53935;
+            font-size: 18px;
+            border-bottom: 1px solid #e53935;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            font-size: 16px;
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        /* Exam questions section */
+        .exam-questions h2 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .add-button, .file-button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            color: #fff;
+        }
+        
+        .add-button {
+            background-color: #4CAF50;
+        }
+        
+        .file-button {
+            background-color: #2196F3;
+        }
+        
+        .question-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .question-item {
+            margin-bottom: 20px;
+        }
+        
+        .question-item p {
+            font-weight: bold;
+            margin: 0;
+        }
+        
+        .options {
+            margin-left: 15px;
+            margin-top: 5px;
+            color: #666;
+        }
+        
+        /* Buttons for update and delete */
+        .action-buttons {
+            margin-top: 10px;
+        }
+        
+        .update-button, .delete-button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            color: white;
+        }
+        
+        .update-button {
+            background-color: #2196F3;
+            margin-right: 10px;
+        }
+        
+        .delete-button {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Dash Board</h2>
+        <a href="#">Exams</a>
+        <a href="#">Back</a>
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <div class="main-header">
+            <div>
+                <h1>Manage Exams</h1>
+                <p>Add Questions for Anatomy Quiz</p>
+            </div>
+        </div>
+
+        <div class="exam-section">
+            <!-- Exam Information Section -->
+            <div class="exam-box">
+                <h2>Exam Information</h2>
+                <div class="form-group">
+                    <label>Course</label>
+                    <select>
+                        <option>Select Course</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Exam Title</label>
+                    <select>
+                        <option>Select Title</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Exam Description</label>
+                    <select>
+                        <option>Select Description</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Exam Time Limit</label>
+                    <select>
+                        <option>Select Time Limit</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Display</label>
+                    <select>
+                        <option>Select Display Limit</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Exam Questions Section -->
+            <div class="exam-box exam-questions">
+                <h2>Exam Questions</h2>
+                <div class="buttons">
+                    <button class="add-button">Add Questions</button>
+                    <button class="file-button">Add File</button>
+                </div>
+                
+                <ul class="question-list">
+                    <li class="question-item">
+                        <p>1) What is the value of 7 + 8?</p>
+                        <div class="options">
+                            A: 10 <br>
+                            B: 12 <br>
+                            C: 15 <br>
+                            D: 14
+                        </div>
+                        <div class="action-buttons">
+                            <button class="update-button">Update</button>
+                            <button class="delete-button">Delete</button>
+                        </div>
+                    </li>
+                    <li class="question-item">
+                        <p>2) What planet is known as the 'Red Planet'?</p>
+                        <div class="options">
+                            A: Earth <br>
+                            B: Venus <br>
+                            C: Mars <br>
+                            D: Jupiter
+                        </div>
+                        <div class="action-buttons">
+                            <button class="update-button">Update</button>
+                            <button class="delete-button">Delete</button>
+                        </div>
+                    </li>
+                    <li class="question-item">
+                        <p>3) In which year did World War II end?</p>
+                        <div class="options">
+                            A: 1942 <br>
+                            B: 1944 <br>
+                            C: 1945 <br>
+                            D: 1950
+                        </div>
+                        <div class="action-buttons">
+                            <button class="update-button">Update</button>
+                            <button class="delete-button">Delete</button>
+                        </div>
+                    </li>
+                    <li class="question-item">
+                        <p>4) 70 percent of Earth's surface is covered in which element?</p>
+                        <div class="options">
+                            A: Nitrogen <br>
+                            B: Helium <br>
+                            C: Oxygen <br>
+                            D: Water
+                        </div>
+                        <div class="action-buttons">
+                            <button class="update-button">Update</button>
+                            <button class="delete-button">Delete</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

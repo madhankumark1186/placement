@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        .feedback-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            width: 60px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 26px;
+            color: #ff7f50;
+            margin: 0;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+        }
+
+        th, td {
+            text-align: center;
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #ff7f50;
+            color: white;
+        }
+
+        td {
+            font-size: 14px;
+        }
+
+        input[type="radio"] {
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+            font-size: 16px;
+        }
+
+        textarea {
+            width: 96%; /* Reduced width for a more compact design */
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: none;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #ff7f50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff5733;
+        }
+    </style>
+</head>
+<body>
+    <div class="feedback-container">
+        <header>
+            <img src="logo.png" alt="YourCompany Logo" class="logo">
+            <h1>YourCompany</h1>
+        </header>
+        <div class="form-header">
+            <h2>We value your feedback.</h2>
+            <p>Please complete the following form and help us improve our customer experience.</p>
+        </div>
+        <form action="submit_feedback.php" method="POST">
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Very Satisfied</th>
+                    <th>Satisfied</th>
+                    <th>Neutral</th>
+                    <th>Unsatisfied</th>
+                    <th>Very Unsatisfied</th>
+                </tr>
+                <tr>
+                    <td>How satisfied are you with our product?</td>
+                    <td><input type="radio" name="product_satisfaction" value="Very Satisfied"></td>
+                    <td><input type="radio" name="product_satisfaction" value="Satisfied"></td>
+                    <td><input type="radio" name="product_satisfaction" value="Neutral"></td>
+                    <td><input type="radio" name="product_satisfaction" value="Unsatisfied"></td>
+                    <td><input type="radio" name="product_satisfaction" value="Very Unsatisfied"></td>
+                </tr>
+                <tr>
+                    <td>Were you satisfied with the balance of easy and challenging questions on the exam, and did it effectively test a variety of skills?"</td>
+                    <td><input type="radio" name="service_satisfaction" value="Very Satisfied"></td>
+                    <td><input type="radio" name="service_satisfaction" value="Satisfied"></td>
+                    <td><input type="radio" name="service_satisfaction" value="Neutral"></td>
+                    <td><input type="radio" name="service_satisfaction" value="Unsatisfied"></td>
+                    <td><input type="radio" name="service_satisfaction" value="Very Unsatisfied"></td>
+                </tr>
+                <tr>
+                    <td>Are you satisfied with the environment in which you attended the exam?"</td>
+                    <td><input type="radio" name="environment_satisfaction" value="Very Satisfied"></td>
+                    <td><input type="radio" name="environment_satisfaction" value="Satisfied"></td>
+                    <td><input type="radio" name="environment_satisfaction" value="Neutral"></td>
+                    <td><input type="radio" name="environment_satisfaction" value="Unsatisfied"></td>
+                    <td><input type="radio" name="environment_satisfaction" value="Very Unsatisfied"></td>
+                </tr>
+            </table>
+            <label for="comments">Tell us how we can improve</label>
+            <textarea name="comments" id="comments" rows="5" placeholder="Enter your feedback here"></textarea>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+</html>

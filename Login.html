@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Welcome Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #4c0080;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            padding-top: 100px; 
+            overflow: hidden;
+        }
+
+        .header {
+            width: 100%;
+            background-color: #4c0080;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #00e0ff;
+            margin-left: -60%;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #00e0ff;
+        }
+
+        .container {
+            display: flex;
+            width: 80%;
+            max-width: 1200px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+            height: 450px;
+        }
+
+        .left-section {
+            background: #1a1a2e;
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .left-section .logo h1 {
+            background-color:  linear-gradient(180deg, transparent, #ff00ff);
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .login-form {
+            width: 100%;
+            max-width: 350px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            border: none;
+            background-color: linear-gradient(180deg, transparent, #ff00ff);
+            color: #000;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 1rem;
+        }
+
+        .login-form button:hover {
+            background-color: #0096c7;
+        }
+
+        .links {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .links a {
+            color: #00e0ff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .links a:hover {
+            color: #0096c7;
+        }
+
+        .right-section {
+            flex: 1;
+            background: linear-gradient(180deg, transparent, #ff00ff);
+            padding: 40px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .right-section h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .right-section p {
+            font-size: 1.2rem;
+            max-width: 400px;
+            line-height: 1.5;
+        }
+        .logout-icon {
+            margin-right: 20px;
+        }
+
+        .logout-icon img {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .logout-icon:hover::after {
+            content: "Logout";
+            position: absolute;
+            top: 90px;
+            right: 20px;
+            background-color: #000;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 12px;
+            border-radius: 5px;
+            white-space: nowrap;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+        .back-button {
+            width: 50px; /* Increased size */
+            height: 50px; /* Increased size */
+            cursor: pointer;
+        }
+
+        .back-button img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="header">
+        <div class="back-button">
+            <img src="logo-photoaidcom-cropped.png" alt="Back">
+        </div>
+        <div class="logo">Career Gate</div>
+        <div class="nav-links">
+            <a onclick="window.location.href='index.html'">Home</a>
+            <a onclick="window.location.href='Login.html'">Login</a>
+            <a onclick="window.location.href='Aboutus.html'">About Us</a>
+            <a onclick="window.location.href='signup.html'">Register</a>
+            <a onclick="window.location.href='admin.html'">Admin</a>
+            <a onclick="window.location.href='index.html'">Logout</a>
+        </div>
+    </div> 
+
+    <div class="container">
+        <div class="left-section">
+            <div class="logo">
+                <h1>Login</h1>
+            </div>
+
+            <form class="login-form" action="login.php" method="POST">
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">LOGIN</button>
+                <div class="links">
+                    <a href="Resetpassword.html">Forgot password?</a>
+                </div>
+                <div class="links">
+                    <p>Don't have an account? <a href="signup.html">Register Now</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="right-section">
+            <h1>Welcome.</h1>
+            <p>Your gateway to a personalized experience. Sign in now.</p>
+        </div>
+    </div>
+
+</body>
+</html>

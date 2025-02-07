@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Overview</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #111;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            color: lime;
+            
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .exam-card {
+            background-color: #12232e;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            margin: 0 auto;
+            color: lightgreen;
+            box-shadow: 0 0 100px rgba(0, 255, 238, 0.5);
+        }
+
+        .exam-card h2 {
+            color: lightgreen;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        .exam-card p {
+            color: white;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .exam-card p span {
+            color: #ff4d4d;
+        }
+
+        .back-button {
+            margin-top: 20px;
+        }
+
+        .back-button button {
+            background-color: #ff4d4d;
+            color: white;
+            font-size: 1em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .back-button button:hover {
+            background-color: #ff6666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dash Board Overview</h1>
+        <div class="exam-card">
+            <h2>Upcoming Exams</h2>
+            <p><span>Next Exam:</span> Math's test on November 20, 2024</p>
+            <p><span>English Test:</span> On November 25, 2024</p>
+        </div>
+        <div class="back-button">
+            <button>Back</button>
+        </div>
+    </div>
+</body>
+</html>

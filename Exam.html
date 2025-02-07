@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #4c0080;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .header {
+            width: 100%;
+            background-color: #4c0080;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            
+        }
+
+        .header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #00e0ff;
+            margin-left: -60%;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+            margin-top: 10px;
+        }
+
+        .nav-links a:hover {
+            color: #00e0ff;
+        }
+
+        .dashboard-container {
+            background-color: #1a1a2e;
+            padding: 40px;
+            width: 450px;
+            border-radius: 12px;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            margin-top: 40px;
+        }
+
+        .dashboard-container h2 {
+            color: #00e5ff;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .exam-btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background-color: #00e5ff;
+            color: #000;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .exam-btn:hover {
+            background-color: #0096c7;
+        }
+
+        .logout-link {
+            margin-top: 30px;
+            font-size: 1rem;
+        }
+
+        .logout-link a {
+            color: #00e5ff;
+            text-decoration: none;
+        }
+
+        .logout-link a:hover {
+            text-decoration: underline;
+        }
+        .logout-icon {
+            position: relative;
+        }
+
+        .logout-icon img {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            margin-right: 50px;
+        }
+
+        .logout-icon:hover::after {
+            content: "Logout";
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #000;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 12px;
+            border-radius: 5px;
+            white-space: nowrap;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+        .back-button {
+            width: 50px; /* Increased size */
+            height: 50px; /* Increased size */
+            cursor: pointer;
+        }
+
+        .back-button img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    <script>
+        function goToInstruction() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const email = urlParams.get('email');
+            if (email) {
+                window.location.href = `choosepage.html?email=${encodeURIComponent(email)}`;
+            } else {
+                alert("Email not found in the URL!");
+            }
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="back-button">
+            <img src="logo-photoaidcom-cropped.png" alt="Back">
+        </div>
+        <div class="logo">Career Gate</div>
+        <div class="nav-links">
+            <a onclick="window.location.href='index.html'">Home</a>
+            <a onclick="window.location.href='Login.html'">Login</a>
+            <a onclick="window.location.href='Aboutus.html'">About Us</a>
+            <a onclick="window.location.href='signup.html'">Register</a>
+            <a onclick="window.location.href='admin.html'">Admin</a>
+            <a onclick="window.location.href='index.html'">Logout</a>
+        </div>
+        
+    </div> 
+
+    <div class="dashboard-container">
+        <h2>USER DASHBOARD</h2>
+        <button class="exam-btn" onclick="goToInstruction()">GO TO EXAM</button>
+        <div class="logout-link">
+            <a href="#">Logout</a>
+        </div>
+    </div>
+</body>
+</html>

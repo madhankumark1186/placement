@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Placement Examination</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        .header-container {
+            background-color: black;
+            padding: 20px 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .header-container h2 {
+            color: #300CFD;
+            font-size: 1.8em;
+            margin: 0;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .logout-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .logout-icon img {
+            width: 80px;
+            height: 80px;
+            cursor: pointer;
+        }
+
+        .logout-icon:hover::after {
+            content: "Logout";
+            position: absolute;
+            top: 80px;
+            right: 0;
+            background-color: #000;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 12px;
+            border-radius: 5px;
+            white-space: nowrap;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .instructions-container {
+            background-color: white;
+            padding: 20px;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 100px rgba(0, 255, 238, 0.5);
+            text-align: left;
+            margin-top: 50px;
+        }
+
+        .instructions-container h3 {
+            font-size: 1.2em;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .instructions-container ol {
+            padding-left: 20px;
+            font-size: 1em;
+            color: #333;
+        }
+
+        .instructions-container ol li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .start-test-button {
+            display: block;
+            width: 150px;
+            margin: 20px auto 0;
+            padding: 10px;
+            background-color: #00cc66;
+            color: white;
+            text-align: center;
+            font-size: 1em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .start-test-button:hover {
+            background-color: #00994d;
+        }
+        .back-button {
+            width: 50px; /* Increased size */
+            height: 50px; /* Increased size */
+            cursor: pointer;
+            
+        }
+
+        .back-button img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-right: 70%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <div class="back-button">
+            <img src="logo-photoaidcom-cropped.png" alt="Back">
+        </div>
+        <h2>Online Placement Examination</h2>
+        <div class="logout-icon">
+            <a href="index.html"><img src="Logout1.png" alt="Logout"></a>
+        </div>
+    </div>
+
+    <div class="instructions-container">
+        <h3>Instructions</h3>
+        <ol>
+            <li>Only full-screen mode is available for students to give tests.</li>
+            <li>If a student attempts to reduce the screen, a message will appear stating that the student has only 10 seconds to return to full-screen mode before the test is auto-submitted and the result page is presented.</li>
+            <li>If a student refreshes the screen by accident, his progress is not lost. The progress will be saved, and the timer will be reset to where it was before being refreshed.</li>
+            <li>If a student tries to switch tabs, desktops, or browsers during the test, a warning will appear twice, indicating that the screen has been changed. If the student continues to try to move the tab despite multiple warnings, his test will be auto-submitted.</li>
+            <li>A student cannot take more than one test at the same time. If he tries to open the same test in a different tab, he will be instantly logged out of the one he just closed. <br> <code>print("ALL THE BEST")</code></li>
+        </ol>
+    </div>
+
+    <button onclick="window.location.href='test3.php'" class="start-test-button">Start Test</button>
+</body>
+</html>
